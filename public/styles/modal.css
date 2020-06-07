@@ -1,0 +1,88 @@
+#modal {
+    height: 100vh; /*Toda a altura da tela*/
+    width: 100vw; /*Toda a largura da tela*/
+    background-color: #0E0A14ef; /*cor de fundo os dois ultimos digitos são referente a transparencia*/
+    position: fixed; /*Posição fixa*/
+    top: 0; /*Modal ao topo da tela*/
+    display: flex; /*Um elemento ao lado do outro ou abaixo do outro*/
+    justify-content: center; /*Justifica no centro*/
+    align-items: center; /*itens ao centro do eixo x*/
+    transition: 400ms; /*Tempo de transição ao mudar de cor*/
+}
+
+#modal.hide { /*ao adicionar class hide, modal some*/
+    display: none;
+    
+}
+
+#modal .content {
+    color: white; /*Cor do texto*/
+    width: 420px; /*Largura*/
+}
+
+#modal .header {
+    display: flex; /*Um elemento ao lado do outro ou abaixo do outro*/
+    align-items: center; /*itens ao centro do eixo x*/
+    justify-content: space-between; /*Espaçe entre os itens*/
+    margin-bottom: 48px; /*Margem inferior*/
+}
+
+#modal .header a {
+    background-image: url('../assets/x.svg'); /*Adiciona imagem ao fundo*/
+    width: 20px; /*Largura*/
+    height: 20px; /*Altura*/
+    display: flex; /*Um elemento ao lado do outro ou abaixo do outro*/
+    font-size: 0.01px; /*Tamanho da fonte(Minimo possivel, visivel apenas para leitores de acessibilidade)*/
+}
+
+#modal .header h1 {
+    color: white; /*Cor do texto*/
+    font-size: 36px; /*Tamanho da fonte*/
+    line-height: 42px; /*Altura da linha*/
+}
+
+#modal form label {
+    font-size: 14px; /*Tamanho da fonte*/
+    line-height: 16px; /*Altura da linha*/
+    display: block; /*Display em bloco*/
+    margin-bottom: 8px; /*Margem inferior(Só é possivel caso o display esteja em block)*/
+}
+
+#modal form .field {
+    display: flex; /*Elemento em linha ou em bloco*/
+}
+
+#modal form input {
+    flex: 1; /*Preenchimento automatico*/
+    background-color: var(--background-color); /*Cor do fundo*/
+    border-radius: 8px 0 0 8px; /*Arrendodamento de todas as laterais*/
+    border: 0; /*retira as bordas*/
+    padding: 16px 24px; /*Preenchimento interno de altura e largura*/
+    font-size: 16px; /*Tamanho da fonte*/
+    color: #6c6c86; /*Cor do texto digitado*/
+}
+
+#modal form button {
+    width: 72px; /*Largura*/
+    height: 72px; /*Altura*/
+    background-color: var(--primary-color); /*Cor de fundo*/
+    border: 0; /*Remove bordas*/
+    border-radius: 0 8px 8px 0; /*Arrendondamento de todas as laterais*/
+}
+
+#modal form button:hover { /*ao passar o mouse, muda a cor con transição*/
+    background-color: #2fb85e;
+    transition: 400ms;
+}
+
+/* Cadastro conluido */
+#modal.point-created .content {/*caso haja um point-created*/ 
+    display:flex; /*Elemento em linha ou em bloco*/
+    flex-direction: column; /*Flex em forma de coluna*/
+    align-items: center; /*itens ao centro do eixo x*/
+}
+
+#modal.point-created h1 {
+    color: white; /*Cor do texto*/
+    margin-top: 32px; /*Margem superior*/
+}

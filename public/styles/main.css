@@ -1,0 +1,29 @@
+:root { /*Cria variavel para utilizar na estilização global*/
+    --title-color: #322153;
+    --primary-color: #34cb79;
+    --bottom-color: #2fb86e;
+    --background-color: #f0f0f5;
+}
+
+* { /*Zera o margin e padding em todos os seletores*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Muda o tamanho do form para o tamanho definido do border*/
+}
+html {
+    font-family: 'Roboto', sans-serif; /*Adição de fonte do repositorio do google*/
+}
+
+body{
+    background: #f0f0f5; /*Cor de fundo do corpo*/
+    -webkit-font-smoothing: antialiased; /*Renderização de fonte*/
+}
+
+a {
+    text-decoration: none; /*Remove linha do link*/
+}
+
+h1, h2, h3,h4, h5, h6 { /*Cor e fonte padrão*/
+    color: var(--title-color);
+    font-family: 'Ubuntu', sans-serif;
+}

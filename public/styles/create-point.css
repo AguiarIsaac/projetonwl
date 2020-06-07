@@ -1,0 +1,155 @@
+#page-create-point{
+    width: 90%; /*Largura*/
+    max-width: 1100px; /*Largura Maxima*/
+    margin: 0 auto; /*Espaçamento automatico nas laterais e 0 no top e botton*/
+}
+
+#page-create-point header {
+    margin-top: 48px; /*Margem na parte superior*/
+    display: flex; /*Um elemento ao lado do outro*/
+    justify-content: space-between; /*Espaçe entre os itens*/
+    align-items: center;  
+}
+
+#page-create-point header a {
+    color: var(--title-color); /*cor da fonte*/
+    font-weight: bold; /*Peso da fonte(negrito)*/
+    display: flex; /*Um elemento ao lado do outro*/
+    align-items: center;  /*Alinhamento dos itens no eixo X*/
+}
+
+#page-create-point header a span {
+    background-image: url('../assets/arrow-left.svg'); /*Plano de fundo utilizando page SVG*/
+    width: 20px; /*largura*/
+    height: 24px; /*Altura*/
+    display: flex;
+    margin-right: 16px;
+}
+
+form {
+    background-color: white; /*Cor de fundo*/
+    padding: 64px; /*Preenchimento interno*/
+    border-radius: 8px; /*Arrendondamento de todas laterais*/
+    margin: 80px auto; /*Espaçamento superior e centralização*/
+    max-width: 730px; /*Largura máxima*/   
+}
+
+form h1 {
+    font-size: 36px; /*Tamanho da fonte*/
+}
+
+form fieldset {
+    margin-top: 64px; /*Margem superior*/
+    border: 0; /*Remove linhas das bordas*/
+}
+
+form legend {
+    margin-bottom:40px; /*margem inferior*/
+    display:flex; /*Um elemento ao lado do outro ou abaixo do outro*/
+    align-items: center; /*Alinhamento dos itens no eixo X*/
+    justify-content: space-between; /*Espaçe entre os itens*/
+    width: 100%; /*Largura*/
+}
+
+form legend h2 {
+    font-size: 24px; /*tamanho da fonte*/
+}
+
+form legend span {
+    font-size: 14px; /*Tamanho da fonte*/
+    color: var(--title-color);
+}
+
+form .field {
+    display: flex; /*Um elemento ao lado do outro ou abaixo do outro*/
+    flex-direction: column; /*Flex em forma de coluna*/
+    margin-bottom: 24px; /*Margem inferior*/
+    flex:1; /*Preenchimento automatico*/
+}
+
+form .field-group{
+    display:flex; /*Um elemento ao lado do outro ou abaixo do outro*/
+}
+
+form input,
+form select {
+    background-color: #f0f0f5; /*Cor de fundo*/
+    border: 0; /*Remove linhas das bordas*/
+    padding: 16px 24px; /*Espaçamento interno*/
+    border-radius: 8px; /*Arrendondamento de todas laterais*/
+
+    /* outline: none; Remove linha de seleção */
+}
+
+form select { /*Remove pré configurações do navegador*/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label {
+    font-size: 14px; /*Tamanho da fonte*/
+    margin-bottom: 8px; /*Margem inferior*/
+}
+
+form .field-group .field + .field {
+    margin-left: 24px; /*Margem ao ultimo field mencionado*/
+}
+
+form button {
+    width: 260px; /*Largura*/
+    height: 56px; /*Altura*/
+    background-color: var(--primary-color); /*Cor de fundo*/
+    border-radius: 8px; /*Arrendondamento de todas laterais*/
+    color:white; /*Cor do texto*/
+    font-weight: bold; /*peso da fonte(Negrito)*/
+    font-size: 16px; /*Tamanho da fonte*/
+    border: 0; /*Remove linha das bordas*/
+    margin-top:40px; /*Margem superior*/
+    transition: 400ms; /*Tempo de transição entre cores*/
+}
+
+form button:hover { /*Ao passar o mouse em cima*/
+    background-color: var(--bottom-color); /*Cor de fundo*/
+
+}
+
+.items-grid {
+    display: grid; /*Display fica em grid onde é bidimencional*/
+    grid-template-columns: 1fr 1fr 1fr; /*Define as colunas do grid. o 1fr faz o calculo necessario para caber as 3 colunas*/
+    gap: 16px; /*Separação dos elementos do grid*/
+}
+
+.items-grid li {
+    list-style: none; /*Remove os pontinhos dos itens da lista*/
+    background-color: var(--background-color); /*cor de fundo*/
+    border: 2px solid var(--background-color); /*adiciona borda e uma cor a ela*/
+    height: 180px; /*Altura*/
+    border-radius: 8px; /*Arrendondamento de todas laterais*/
+    padding: 32px 24px 16px; /*Preenchimentos*/
+
+    display: flex; /*Um elemento ao lado do outro ou abaixo do outro*/
+    flex-direction: column; /*Flex em forma de coluna*/
+    align-items: center; /*Alinhamento dos itens no eixo X*/
+    justify-content: space-between; /*Espaçe entre os itens*/
+    text-align: center; /*Centraliza texto*/
+    cursor: pointer; /*Mostra mãozinha ao passar mouse*/
+}
+
+.items-grid li span {
+    flex:1; /*Preenchimento automatico*/
+    display: flex; /*Um elemento ao lado do outro ou abaixo do outro*/
+    align-items: center; /*Alinhamento dos itens no eixo X*/
+    margin-top: 12px; /*Espaçamento superior*/
+    color: var(--title-color); /*Cor do Texto*/
+}
+
+.items-grid li.selected{ /*Quando junto, irá procurar por classes selected nos li*/
+    background: #e1faec; /*Cor de fundo*/
+    border: 2px solid #34cb79; /*adiciona borda e uma cor a ela*/
+}
+
+.items-grid li img,
+.items-grid li span {
+    pointer-events: none; /*Desativa eventos de click nos itens*/
+}

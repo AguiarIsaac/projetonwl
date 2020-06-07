@@ -1,0 +1,84 @@
+
+body::after { /*Criação de pseudo elemento*/
+    content: '';
+    position: fixed; /*Posição fixa*/
+    background: white; /*Cor de fundo*/
+    top: 260px; /*Superior*/
+    right: 0; /*Direita*/
+    left: 0; /*Esquerda*/
+    bottom: 0; /*Inferior*/
+    z-index: -1; /*Eixo de profundidade*/
+}
+
+#page-search-results{
+    width: 90%; /*Largura*/
+    max-width: 1100px; /*Largura Maxima*/
+    margin: 0 auto; /*Espaçamento automatico nas laterais e 0 no top e botton*/
+}
+
+#page-search-results header {
+    margin-top: 48px; /*Margem na parte superior*/
+    display: flex; /*Um elemento ao lado do outro*/
+    justify-content: space-between; /*Alinhamento dos itens no eixo X*/
+    align-items: center;  /*Espaçe entre os itens*/
+}
+
+#page-search-results header a {
+    color: var(--title-color); /*cor da fonte*/
+    font-weight: bold; /*Peso da fonte(negrito)*/
+    display: flex;
+    align-items: center;
+}
+
+#page-search-results header a span {
+    background-image: url('../assets/arrow-left.svg'); /*Plano de fundo utilizando page SVG*/
+    width: 20px; /*largura*/
+    height: 24px; /*Altura*/
+    display: flex;
+    margin-right: 16px;
+}
+
+main {
+    margin: 48px; /*Margem superior*/
+}
+
+main h4 {
+    font-weight: normal; /*Altura da fonte*/
+    font-family: Roboto, sans-serif; /*Escolha de fonte*/
+    margin-bottom: 32px; /*Margin inferior*/
+}
+
+main .cards {
+    display: grid; /*Display fica em grid onde é bidimencional*/
+    grid-template-columns: 1fr 1fr 1fr; /*Define as colunas do grid. o 1fr faz o calculo necessario para caber as 3 colunas*/
+    gap: 24px; /*Separação dos elementos do grid*/
+}
+
+main .cards img {
+    width: 90%; /*Largura*/
+    height: 150px; /*Altura*/
+    border-radius: 8px 8px 0 0; /*Arrendondamento de todas laterais*/
+    object-fit: cover; /*Preenchimento de imagem*/
+}
+
+main .cards h1 {
+    margin-top: 32px; /*Margem superior*/
+    font-size: 36px; /*Tamanho da fonte*/
+    line-height: 41px; /*Altura da linha*/
+    color: #322153; /*Cor do texto*/
+}
+
+main .cards h3 {
+    margin: 24px 0; /*Margens*/
+    font-family: Roboto; /*Fonte*/
+    font-weight: 600; /*Peso da fonte*/
+    font-size: 24px; /*Tamanho da fonte*/
+    line-height: 34px; /*Altura da linha*/
+    color: var(--primary-color); /*Cor do texto*/
+}
+
+main .cards p {
+    font-size: 16px; /*Tamanho da fonte*/
+    line-height: 26px; /*Altura da linha*/
+    color: #6C6C80; /*Cor do texto*/
+}
